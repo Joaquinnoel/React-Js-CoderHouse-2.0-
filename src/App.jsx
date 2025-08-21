@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting="¡Bienvenido a NoelStore,Una de las mejores paginas del pais" />
+      <ItemListContainer greeting="¡Bienvenido a NoelStore,Una de las mejores paginas del pais¡" />
     </>
   );
 }
