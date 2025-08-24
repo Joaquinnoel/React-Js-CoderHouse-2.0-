@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,6 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
-
 
 .navbar {
   display: flex;
@@ -20,6 +19,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .brand {
