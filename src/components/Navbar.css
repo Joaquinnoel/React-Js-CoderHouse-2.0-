@@ -1,57 +1,86 @@
-.navbar{
-    position: fixed;
-    top: 0;
-    width: 97%;
-    left: 0;
-    z-index: 1000;
 
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .brand {
+  color: #28a745; 
+  margin: 0;
   font-size: 1.8rem;
-  font-weight: bold;
-  color: #008000;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 25px;
   margin: 0;
   padding: 0;
-  
 }
-.nav-links a {
-  color: olivedrab;
+
+.nav-links li a {
+  color: #ddd;
   text-decoration: none;
-  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
+.nav-links li a:hover {
+  color: #28a745;
+}
+
+
 .cart-widget {
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: green;
+  color: white;
 }
 
 .badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
   background: red;
   color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
   border-radius: 50%;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.8rem;
-  position: absolute;
-  top: -10px;
-  right: -15px;
+  padding: 3px 7px;
 }
 
+
 .item-list {
-  padding: 35rem;
-  
+  text-align: center;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .item-list h2 {
-  font-size: 1.5rem;
-  color: #008000;
+  color: #28a745;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
+
