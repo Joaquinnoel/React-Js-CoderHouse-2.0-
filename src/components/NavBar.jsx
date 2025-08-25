@@ -7,9 +7,9 @@ const NavBar = () => {
     <nav className="navbar">
       <h1 className="brand">Mi Tienda</h1>
       <ul className="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Dulces</a></li>
+        <li><a href="#">Acidos</a></li>
+        <li><a href="#">Arabes</a></li>
       </ul>
       <CartWidget />
     </nav>
