@@ -10,7 +10,7 @@ const getItem = () => {
         title: "Khamrah",
         description: "Perfume muy bueno, duradero y fresco",
         price: 100000,
-        imageUrl: "../public/khamrah.jpg",
+        imageUrl: '/khamrah.jpg',
       });
     }, 2000);
   });
