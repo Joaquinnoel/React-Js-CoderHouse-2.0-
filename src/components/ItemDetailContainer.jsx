@@ -1,39 +1,19 @@
-import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import products from "../data/products";
 import ItemDetail from "./ItemDetail";
 
-const getItem = () => {
-  
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        id: 1,
-        title: "Khamrah",
-        description: "Perfume muy bueno, duradero y fresco",
-        price: 100000,
-        imageUrl: '/khamrah.jpg',
-      });
-    }, 2000);
-  });
-};
-
 function ItemDetailContainer() {
-  const [item, setItem] = useState(null);
-
-  useEffect(() => {
-    getItem().then((producto) => setItem(producto));
-  }, []);
+  const { id } = useParams();
+  const item = products.find((p) => p.id === parseInt(id));
 
   return (
     <div className="item-detail-container">
-      {item ? (
-        <ItemDetail item={item} />
-      ) : (
-        <p>Cargando la Mejor Eleccion para vos....</p>
-      )}
+      {item ? <ItemDetail item={item} /> : <p>Producto no encontrado</p>}
     </div>
   );
 }
 
 export default ItemDetailContainer;
+
 
         
