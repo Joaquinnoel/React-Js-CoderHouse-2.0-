@@ -1,15 +1,27 @@
-import products from '../data/products';
-import ProductCard from './ProductCard';
+import { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
+import products from "../data/products";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getProducts = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 1000); // simula un fetch
+    });
+
+    getProducts.then((res) => setItems(res));
+  }, []);
+
   return (
-    <div>
-      <h2>{greeting}</h2>
-      <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-        {products.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
+    <div classname="item-list">
+      {items.length > 0 ? (
+        items.map((p) => <ProductCard key={p.id} product={p} />)
+      ) : (
+        <p>Cargando productos...</p>
+      )}
     </div>
   );
 };
