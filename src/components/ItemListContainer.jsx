@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     const getProducts = new Promise((resolve) => {
       setTimeout(() => {
         resolve(products);
-      }, 1000); // simula un fetch
+      }, 1000); 
     });
 
     getProducts.then((res) => setItems(res));
